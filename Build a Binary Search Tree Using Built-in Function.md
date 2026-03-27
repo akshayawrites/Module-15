@@ -23,10 +23,36 @@ To write a Python program to build a binary search tree using a built-in functio
 
 ```
 ENTER YOUR CODE
+from binarytree import Node
+def _build_bst_from_sorted_values(sorted_values):
+if len(sorted_values) == 0:
+    return None
+mid_index = len(sorted_values) // 2
+root = Node(sorted_values[mid_index])
+root.left = _build_bst_from_sorted_values(sorted_values[:mid_index])
+root.right = _build_bst_from_sorted_values(sorted_values[mid_index + 1 :]) 
+return root
+def left_subtree(l):
+for i in l.left.values:
+    print(i, "-->", end="") 
+return 
+a = []
+size = int(input()
+for i in range(0, size):
+val = int(input())
+a.append(val)
+x = sorted(a)
+l = _build_bst_from_sorted_values(x)
+print("Postorder :", l.postorder)
+print("Left Subtree :")
+left_subtree(l)
+print("\nIs this a Binary Search Tree? ", l.is_bst)
 ```
 
 ## OUTPUT
 ```
-```
+<img width="1261" height="365" alt="image" src="https://github.com/user-attachments/assets/a8a079fc-cafa-40ee-b31f-f8e780518c05" />
 
+```
 ## RESULT
+Thus, the Python program to build a binary search tree using a built-in function and perform postorder traversal has been implemented and executed successfully. The left subtree was printed, and it was verified that the tree is a Binary Search Tree.
