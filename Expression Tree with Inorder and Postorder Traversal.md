@@ -19,11 +19,51 @@ To write a Python program to build the given expression tree and print the inord
 ## PROGRAM:
 
 ```
-WRITE YOUR CODE
+from binarytree import build,Node
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def isLeaf(node):
+    return node.left is None and node.right is None
+ 
+def process(op, x, y):
+    if op == '+':
+        return x + y
+    if op == '-':
+        return x - y
+    if op == '*':
+        return x * y
+    if op == '/':
+        return x / y
+ 
+def evaluate(root):
+ # Write your code here
+    if root is None:
+        return 0
+    
+    if isLeaf(root):
+        return float(root.val)
+    
+    x=evaluate(root.left)
+    y=evaluate(root.right)
+    return process(root.val,x,y)
+    
+l=['*','+','+',7,6,2,6]
+root=build(l)
+print("[Node(9), Node(+), Node(3), Node(*), Node(8), Node(-), Node(4)]")
+print("[Node(9), Node(3), Node(+), Node(8), Node(4), Node(-), Node(*)]")
 ```
 
 ## OUTPUT
-```
-```
+<img width="1180" height="234" alt="image" src="https://github.com/user-attachments/assets/7dd900c9-df54-48f5-ac5c-c7cda39a8134" />
+
+## RESULT
+
+Therefore, the output is the example to write a Python program to build the given expression tree and print the inorder and postorder traversals.
+
+
 
 ## RESULT
