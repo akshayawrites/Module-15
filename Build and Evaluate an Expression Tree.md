@@ -59,6 +59,9 @@ root=build(l)
 print("The value of the expression tree is",evaluate(root))
 ```
 ## OUTPUT:
+
 <img width="1187" height="191" alt="image" src="https://github.com/user-attachments/assets/2f976a7e-663c-4882-84a3-9f1c8ee1bbae" />
+
 ## RESULT:
+
 Therefore, the output is the example to write a Python program to build and evaluate the given Expression tree.
