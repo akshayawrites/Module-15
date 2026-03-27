@@ -20,10 +20,20 @@ To write a Python program to build a binary tree with a root, left, and right no
 
 ```
 ENTER YOUR CODE
+from binarytree import Node
+l = []
+for i in range(3):
+l.append(input())
+root = Node(l[0])
+root.left = Node(l[1])
+root.right = Node(l[2])
+print("Binary Tree : ")
+for i in root.values:
+print(i, "--> ", end="")
 ```
-
 ## OUTPUT
 ```
+<img width="564" height="252" alt="image" src="https://github.com/user-attachments/assets/ee293bc5-d264-4ca9-9730-fbb28464758d" />
 ```
-
 ## RESULT
+Thus, the Python program to print a binary tree consisting of a root, left, and right node has been implemented and executed successfully.
